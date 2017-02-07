@@ -1,6 +1,2 @@
-$navLinkFont: bold;
-
-.menu-link {
-  font-weight: $navLinkFont;
-}
- 
+@import "base/variables";
+@import "components/navigation";

@@ -25531,7 +25531,7 @@
 	                    { className: 'menu' },
 	                    React.createElement(
 	                        'li',
-	                        { className: 'menu-text' },
+	                        { className: 'menu-text title-color' },
 	                        'React Time App'
 	                    ),
 	                    React.createElement(
@@ -25539,9 +25539,7 @@
 	                        null,
 	                        React.createElement(
 	                            IndexLink,
-	                            { to: '/', activeClassName: 'active', activeStyle: {
-	                                    fontWeight: 'bold'
-	                                } },
+	                            { to: '/', activeClassName: 'active-link' },
 	                            'Timer'
 	                        )
 	                    ),
@@ -25550,21 +25548,8 @@
 	                        null,
 	                        React.createElement(
 	                            Link,
-	                            { to: '/about', activeClassName: 'active', activeStyle: {
-	                                    fontWeight: 'bold'
-	                                } },
+	                            { to: '/about', activeClassName: 'active-link' },
 	                            'Countdown'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            Link,
-	                            { to: '/examples', activeClassName: 'active', activeStyle: {
-	                                    fontWeight: 'bold'
-	                                } },
-	                            'Examples'
 	                        )
 	                    )
 	                )
@@ -25581,8 +25566,8 @@
 	                        'Created by ',
 	                        React.createElement(
 	                            'a',
-	                            null,
-	                            'Antoine McTaggart'
+	                            { href: 'http://xyzrequiem.com', target: '_blank' },
+	                            'Antoine'
 	                        )
 	                    )
 	                )
@@ -25976,7 +25961,7 @@
 
 
 	// module
-	exports.push([module.id, ".menu-link {\n  font-weight: bold; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #333333; }\n\n.top-bar .menu-text {\n  color: white; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline;\n  padding: 0; }\n", ""]);
 
 	// exports
 
