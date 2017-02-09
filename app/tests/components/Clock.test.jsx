@@ -10,33 +10,33 @@ describe('Clock', () => {
   it ('should exist', () => {
     expect(Clock).toExist();
   });
-});
 
-describe('render', () => {
-  it ('should render clock to output', () => {
-    var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}/>);
-    var $el = $(ReactDOM.findDOMNode(clock)); //jQuery selector
-    var actualText = $el.find('.clock-text').text();
-    expect(actualText).toExist('01:02');
-  });
-});
-
-describe('Clock, Format seconds', () => {
-  it ('should format 615 seconds', () => {
-    var clock = TestUtils.renderIntoDocument(<Clock/>);
-    var seconds = 615;
-    var expected = '10:15';
-    var actual = clock.formatSeconds(seconds);
-
-    expect(actual).toBe(expected);
+  describe('-render', () => {
+    it ('should render clock to output', () => {
+      var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}/>);
+      var $el = $(ReactDOM.findDOMNode(clock)); //jQuery selector
+      var actualText = $el.find('.clock-text').text();
+      expect(actualText).toExist('01:02');
+    });
   });
 
-  it ('should format 61 seconds', () => {
-    var clock = TestUtils.renderIntoDocument(<Clock/>);
-    var seconds = 61;
-    var expected = '01:01';
-    var actual = clock.formatSeconds(seconds);
+  describe('-Clock, Format seconds', () => {
+    it ('should format 615 seconds', () => {
+      var clock = TestUtils.renderIntoDocument(<Clock/>);
+      var seconds = 615;
+      var expected = '10:15';
+      var actual = clock.formatSeconds(seconds);
 
-    expect(actual).toBe(expected);
+      expect(actual).toBe(expected);
+    });
+
+    it ('should format 61 seconds', () => {
+      var clock = TestUtils.renderIntoDocument(<Clock/>);
+      var seconds = 61;
+      var expected = '01:01';
+      var actual = clock.formatSeconds(seconds);
+
+      expect(actual).toBe(expected);
+    });
   });
 });
